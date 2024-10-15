@@ -1,2 +1,1 @@
-import * as zod from "zod";
-export const z = zod;
+export * as z from "zod";

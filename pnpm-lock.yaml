@@ -8,6 +8,9 @@ importers:
 
   packages/backend:
     dependencies:
+      '@jasper-samples-bookverse/common':
+        specifier: workspace:*
+        version: link:../common
       express:
         specifier: ^4.21.1
         version: 4.21.1
@@ -27,9 +30,16 @@ importers:
       zod:
         specifier: ^3.23.8
         version: 3.23.8
+    devDependencies:
+      typescript:
+        specifier: ^5.6.3
+        version: 5.6.3
 
   packages/web:
     dependencies:
+      '@jasper-samples-bookverse/common':
+        specifier: workspace:*
+        version: link:../common
       next:
         specifier: 14.2.15
         version: 14.2.15(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
