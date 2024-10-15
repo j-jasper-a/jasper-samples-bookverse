@@ -1,0 +1,23 @@
+{
+  "name": "@jasper-samples-bookverse/backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "api/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "@jasper-samples-bookverse/common": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^20",
+    "typescript": "^5"
+  },
+  "type": "module",
+  "private": true
+}
