@@ -1,5 +1,6 @@
 import express from "express";
 import admin from "firebase-admin";
+import { handleError } from "./middleware/error.middleware.js";
 
 const serviceAccount = {
   projectId: process.env.FIREBASE_PROJECT_ID,
@@ -39,5 +40,7 @@ app.get("/db", async (req, res) => {
     res.status(500).json({ message: "Failed to fetch data from Firestore" });
   }
 });
+
+app.use(handleError);
 
 export default app;
