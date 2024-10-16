@@ -26,17 +26,18 @@ app.get("/", (req, res) => {
     .json({ message: "If you can read this message, the backend is live." });
 });
 
-app.get("/db", (req, res) => {
-  // Show all the documents in tests collection
-  db.collection("tests")
-    .get()
-    .then((querySnapshot) => {
-      const docs: any = [];
-      querySnapshot.forEach((doc) => {
-        docs.push(doc.data());
-      });
-      res.status(200).json(docs);
+app.get("/db", async (req, res) => {
+  try {
+    const querySnapshot = await db.collection("tests").get();
+    const docs: any = [];
+    querySnapshot.forEach((doc) => {
+      docs.push(doc.data());
     });
+    res.status(200).json(docs);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: "Failed to fetch data from Firestore" });
+  }
 });
 
 export default app;
