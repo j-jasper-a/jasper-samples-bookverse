@@ -1,5 +1,5 @@
 import express from "express";
-import * as admin from "firebase-admin";
+import admin from "firebase-admin";
 
 const serviceAccount = {
   projectId: process.env.FIREBASE_PROJECT_ID,
