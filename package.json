@@ -1,0 +1,9 @@
+{
+  "name": "jasper-samples-bookverse",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --filter @jasper-samples-bookverse/web dev"
+  }
+}
