@@ -1,12 +1,15 @@
 import express from "express";
+
 const app = express();
+
+app.use(express.json()); // For JSON parsing
 
 app.get("/", (req, res) => {
   res.send("Hello from Vercel!");
 });
 
-app.listen(5000, () => {
-  console.log("Server listening on port 5000");
+app.get("/about", (req, res) => {
+  res.send("About Page");
 });
 
 export default app;

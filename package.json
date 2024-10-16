@@ -4,6 +4,6 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "pnpm --filter @jasper-samples-bookverse/web dev"
+    "dev": "pnpm --filter @jasper-samples-bookverse/frontend dev"
   }
 }
